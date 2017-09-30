@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Sistema de Retiro de Asignaturas</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+
+	<body>
+
+		<h1>Sistema de Retiro de Asignaturas</h1>
+		<div id="Informacion">
+			<form action="contacto.php" method="post">
+            	<fieldset class="datosEstudiante">
+                	<legend >Información</legend>
+
+                	<label for="txtNombre">Nombre:</label>
+                	<input type="text" name="nombre" id="txtNombre" placeholder= "Ej: Javier">
+
+	                <label for="txtApellido">Apellido:</label>
+    	            <input type="text" name="correo" id="txtApellido" placeholder= "Ej: Bastidas ">
+
+        	        <label for="txtCedula">Cédula:</label>
+            	    <input type="text" name="asunto" id="txtCedula" placeholder= "Ej: 25632200">
+
+                	<label for="txtCarrera">Carrera:</label>
+                	<input type="text" name="asunto" id="txtCarrera" placeholder= "Ej: Ingenieria en Informatica">
+
+                	<label for="txtSemestre">Numero de semestre con más materias inscritas:</label>
+                	<input type="text" name="asunto" id="txtSemestre" placeholder= "Ej: 4">                
+
+            	</fieldset>
+        	</form>
+        </div>
+        <div id="Asignatura">
+            <form action="contacto.php" method="post">
+                <fieldset class="datosAsignatura">
+                    <legend >Asignatura</legend>
+
+                    <label for="txtNombre">Nombre:</label>
+                    <input type="text" name="nombreA" id="txtNombreA" placeholder= "Ej: Programacion II">
+
+                    <label for="txtCodigo">Codigo:</label>
+                    <input type="text" name="codigo" id="txtCodigo" placeholder= "Ej: 806475J">
+
+                    <label for="txtUnidades">Unidades de Credito:</label>
+                    <input type="text" name="unidades" id="txtUnidades" placeholder= "Ej: 4">              
+
+                    <label for="txtMotivo">Motivo del retiro:</label>
+                    <textarea id="txtMotivo"></textarea>
+                    <button>Procesar Retiro</button>
+
+                </fieldset>
+            </form>
+        </div>
+		<script src="js/code.js" ></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+	</body>
+</html>
