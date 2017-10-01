@@ -12,7 +12,7 @@
 
 		<h1>Sistema de Retiro de Asignaturas</h1>
 		<div id="Informacion">
-			<form action="contacto.php" method="post">
+			<form name="info">
             	<fieldset class="datosEstudiante">
                 	<legend >Información</legend>
 
@@ -20,26 +20,26 @@
                 	<input type="text" name="nombre" id="txtNombre" placeholder= "Ej: Javier">
 
 	                <label for="txtApellido">Apellido:</label>
-    	            <input type="text" name="correo" id="txtApellido" placeholder= "Ej: Bastidas ">
+    	            <input type="text" name="apellido" id="txtApellido" placeholder= "Ej: Bastidas ">
 
         	        <label for="txtCedula">Cédula:</label>
-            	    <input type="text" name="asunto" id="txtCedula" placeholder= "Ej: 25632200">
+            	    <input type="text" name="cedula" id="txtCedula" placeholder= "Ej: 25632200">
 
                 	<label for="txtCarrera">Carrera:</label>
-                	<input type="text" name="asunto" id="txtCarrera" placeholder= "Ej: Ingenieria en Informatica">
+                	<input type="text" name="carrera" id="txtCarrera" placeholder= "Ej: Ingenieria en Informatica">
 
                 	<label for="txtSemestre">Numero de semestre con más materias inscritas:</label>
-                	<input type="text" name="asunto" id="txtSemestre" placeholder= "Ej: 4">                
+                	<input type="text" name="semestre" id="txtSemestre" placeholder= "Ej: 4">                
 
             	</fieldset>
         	</form>
         </div>
         <div id="Asignatura">
-            <form action="contacto.php" method="post">
+            <form name= "asig" action="retirar.php" method="post" onsubmit="return validandoForms()">
                 <fieldset class="datosAsignatura">
                     <legend >Asignatura</legend>
 
-                    <label for="txtNombre">Nombre:</label>
+                    <label for="txtNombreA">Nombre:</label>
                     <input type="text" name="nombreA" id="txtNombreA" placeholder= "Ej: Programacion II">
 
                     <label for="txtCodigo">Codigo:</label>
@@ -49,7 +49,8 @@
                     <input type="text" name="unidades" id="txtUnidades" placeholder= "Ej: 4">              
 
                     <label for="txtMotivo">Motivo del retiro:</label>
-                    <textarea id="txtMotivo"></textarea>
+                    <textarea name="motivo" id="txtMotivo"></textarea>
+                    
                     <button>Procesar Retiro</button>
 
                 </fieldset>
