@@ -17,39 +17,38 @@
                 	<legend >Información</legend>
 
                 	<label for="txtNombre">Nombre:</label>
-                	<input type="text" name="nombre" id="txtNombre" placeholder= "Ej: Javier" />
+                	<input type="text" name="nombre" id="txtNombre" value="Gerifruncio">
 
 	                <label for="txtApellido">Apellido:</label>
-    	            <input type="text" name="apellido" id="txtApellido" placeholder= "Ej: Bastidas ">
+    	            <input type="text" name="apellido" id="txtApellido" value="Maizeno">
 
         	        <label for="txtCedula">Cédula:</label>
-            	    <input type="text" name="cedula" id="txtCedula" placeholder= "Ej: 25632200">
+            	    <input type="text" name="cedula" id="txtCedula" value="100110101">
 
                 	<label for="txtCarrera">Carrera:</label>
-                	<input type="text" name="carrera" id="txtCarrera" placeholder= "Ej: Ingenieria en Informatica">
+                	<input type="text" name="carrera" id="txtCarrera" value="Ingenieria en Informática">
 
                 	<label for="txtSemestre">Numero de semestre con más materias inscritas:</label>
-                	<input type="text" name="semestre" id="txtSemestre" placeholder= "Ej: 4">                
+                	<input type="text" name="semestre" id="txtSemestre" value= "4">                
 
             	</fieldset>
-        	</form>
+        	
         </div>
         <div id="Asignatura">
-            <form name= "asig" action="retirar.php" method="post" onsubmit="return validandoForms()">
                 <fieldset class="datosAsignatura">
                     <legend >Asignatura</legend>
 
                     <label for="txtNombreA">Nombre:</label>
-                    <input type="text" name="nombreA" id="txtNombreA" placeholder= "Ej: Programacion II">
+                    <input type="text" name="asignatura" id="txtNombreA" value = "Programacion II">
 
                     <label for="txtCodigo">Codigo:</label>
-                    <input type="text" name="codigo" id="txtCodigo" placeholder= "Ej: 806475J">
+                    <input type="text" name="codigo" id="txtCodigo" value = "806475J">
 
                     <label for="txtUnidades">Unidades de Credito:</label>
-                    <input type="text" name="unidades" id="txtUnidades" placeholder= "Ej: 4">              
+                    <input type="text" name="unidades" id="txtUnidades" value = "4">              
 
                     <label for="txtMotivo">Motivo del retiro:</label>
-                    <textarea name="motivo" id="txtMotivo"></textarea>
+                    <textarea name="motivo" id="txtMotivo">Porque si</textarea>
                     
                     <button>Procesar Retiro</button>
 
