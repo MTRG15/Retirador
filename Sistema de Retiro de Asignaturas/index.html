@@ -11,8 +11,9 @@
 	<body>
 
 		<h1>Sistema de Retiro de Asignaturas</h1>
-		<div id="Informacion">
-		<form name="info" action="retirar.php" method="post" >
+		
+		<form name="info" action="retirar.php" method="post" onsubmit="return validandoForms()">
+            <div id="Informacion">
             	<fieldset class="datosEstudiante">
                 	<legend >Información</legend>
 
@@ -23,18 +24,18 @@
     	            <input type="text" name="apellido" id="txtApellido" value="Maizeno">
 
         	        <label for="txtCedula">Cédula:</label>
-            	    <input type="text" name="cedula" id="txtCedula" value="100110101">
+            	    <input type="number" name="cedula" id="txtCedula" value="100110101">
 
                 	<label for="txtCarrera">Carrera:</label>
                 	<input type="text" name="carrera" id="txtCarrera" value="Ingenieria en Informática">
 
                 	<label for="txtSemestre">Numero de semestre con más materias inscritas:</label>
-                	<input type="text" name="semestre" id="txtSemestre" value= "4">                
+                	<input type="number" name="semestre" id="txtSemestre" value= "4">                
 
             	</fieldset>
         	
-        </div>
-        <div id="Asignatura">
+            </div>
+            <div id="Asignatura">
                 <fieldset class="datosAsignatura">
                     <legend >Asignatura</legend>
 
@@ -45,16 +46,17 @@
                     <input type="text" name="codigo" id="txtCodigo" value = "806475J">
 
                     <label for="txtUnidades">Unidades de Credito:</label>
-                    <input type="text" name="unidades" id="txtUnidades" value = "4">              
+                    <input type="number" name="unidades" id="txtUnidades" value = "4">              
 
                     <label for="txtMotivo">Motivo del retiro:</label>
-                    <textarea name="motivo" id="txtMotivo">Porque si</textarea>
+                    <textarea name="motivo" id="txtMotivo" required>Porque si</textarea>
                     
                     <button>Procesar Retiro</button>
 
                 </fieldset>
-            </form>
-        </div>
+            </div>
+        </form>
+        
 		<script src="js/code.js" ></script>
         <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 	</body>

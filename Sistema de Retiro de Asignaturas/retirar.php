@@ -7,7 +7,7 @@
         
     </head>
 
-    <body>
+    <body class="retiro">
     
 <?php
     $NOMBRE = $_REQUEST['nombre'];
@@ -22,15 +22,15 @@
 
 ?>
     
-    <fieldset class="datosEstudiante">
-        <div>
+    <fieldset class="recibido">
+        <div class="datos-estudiante">
             <p>Nombre: <?= $NOMBRE ?></p>    
             <p>Apellido: <?= $APELLIDO ?></p>
             <p>Cédula: <?= $CEDULA ?></p>
             <p>Carrera: <?= $CARRERA ?></p>
             <p>Semestre: <?= $SEMESTRE ?></p>
         </div>
-        <div>
+        <div ckass="datos-estudiante">
             <p>Asignatura: <?= $ASIGNATURA ?></p>
             <p>Código: <?= $CODIGO ?></p>
             <p>Unidades: <?= $UNIDADES ?></p>

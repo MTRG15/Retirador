@@ -14,7 +14,7 @@ function validandoForms() {
     }
     x = document.forms["info"]["cedula"].value;
     if (x == "") {
-        alert("Debe colocar su cedula");
+        alert("Debe colocar su cédula");
         document.getElementById("txtCedula").focus();
         return false;
     }
@@ -45,14 +45,8 @@ function validandoForms() {
     }
     x = document.forms["asig"]["unidades"].value;
     if (x == "") {
-        alert("Debe colocar el numero de unidades de credito de la asignatura a retirar");
+        alert("Debe colocar el número de unidades de credito de la asignatura a retirar");
         document.getElementById("txtUnidades").focus();
-        return false;
-    }
-     x = document.forms["asig"]["motivo"].value;
-    if (x == "") {
-        alert("Debe colocar el motivo de retiro");
-        document.getElementById("txtMotivo").focus();
         return false;
     }
 }
