@@ -21,16 +21,21 @@
     $MOTIVO = $_REQUEST['motivo'];
 
 ?>
-    <h1><img src="css/Logo2.png" class="logo1">Retiro de Materia Exitoso</h1>
+    
     <fieldset class="recibido">
-        <p>Los datos han sido procesados correctamente, esperamos que su semestre y su vida se vean aliviados sin la presión psicológica de <?= $ASIGNATURA ?> </p>
-        <table>
-            <tr> <th>Nombre:</th> <td><?= $NOMBRE ?></td>     <th>Asignatura:</th> <td><?= $ASIGNATURA ?></td> </tr>
-            <tr> <th>Apellido:</th> <td><?= $APELLIDO ?></td> <th>Código:</th> <td><?= $CODIGO ?></td> </tr>
-            <tr> <th>Cédula:</th> <td><?= $CEDULA ?></td>     <th>Unidades:</th> <td><?= $UNIDADES ?></td> </tr>
-            <tr> <th>Carrera:</th> <td><?= $CARRERA ?></td>   <th>Motivo:</th> <td><?= $MOTIVO ?></td></tr>
-            <tr> <th>Semestre:</th> <td><?= $SEMESTRE ?></td> </tr>
-        </table>
+        <div class="datos-estudiante">
+            <p>Nombre: <?= $NOMBRE ?></p>    
+            <p>Apellido: <?= $APELLIDO ?></p>
+            <p>Cédula: <?= $CEDULA ?></p>
+            <p>Carrera: <?= $CARRERA ?></p>
+            <p>Semestre: <?= $SEMESTRE ?></p>
+        </div>
+        <div ckass="datos-estudiante">
+            <p>Asignatura: <?= $ASIGNATURA ?></p>
+            <p>Código: <?= $CODIGO ?></p>
+            <p>Unidades: <?= $UNIDADES ?></p>
+            <p>Motivo: <?= $MOTIVO ?></p>
+        </div>
     </fieldset>
     
 </body>
