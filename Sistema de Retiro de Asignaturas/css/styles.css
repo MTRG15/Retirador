@@ -1,10 +1,24 @@
 body{
-	background-color: CornflowerBlue;
+	background-color: #8090B7;
+    font-family: arial, sans-serif;
 }
+
 
 .retiro{
     color: white;
-    font: arial;
+}
+
+.contenedor{
+    width: 80%;
+    align-content: center;
+    padding: 0 10% 0 10%;
+    
+}
+
+.logo1{
+    margin-right: 20px;
+    height: 80px;
+    vertical-align: top;
 }
 
 h1{
@@ -15,29 +29,29 @@ h1{
 }
 
 #Informacion{
-	width: 45%;
+	width: 49%;
 	float: left;
     clear: none;
 }
 
 #Asignatura{
-	width: 45%;
+	width: 49%;
 	float: right;
     clear: none;
 }
 
-fieldset.datosEstudiante{
-
-	background-color: RoyalBlue;
-	border-radius: 10px;
-	
+#motivo{
+    vertical-align: sub;
 }
 
-fieldset.datosAsignatura{
+.boton{
+    margin-top: 20px;
+    align-content: center;
+}
 
-	background-color: RoyalBlue;
+fieldset{
+	background-color: #0F62AC;
 	border-radius: 10px;
-
 }
 
 legend{
@@ -53,6 +67,19 @@ label{
 	text-shadow: 3px 3px 3px black;
 }
 
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animacion {
+    0% {background-color: #ffffff;}
+    100% {background-color: #cdcdcd;}
+}
+
+/* Standard syntax */
+@keyframes animacion {
+    0% {background-color: #ffffff;}
+    100% {background-color: #cdcdcd;}
+}
+
+
 input{
     width: 100%;
     padding: 10px 20px;
@@ -60,17 +87,36 @@ input{
     display: inline-block;
     border: 3px solid #ccc;
     border-radius: 4px;
-    border-color: LightBlue;
+    border-color: #0090ff;
     box-sizing: border-box;
     color: black;
 }
 
-input:focus {
-    background-color: white;
+input:focus, input:active, textarea:focus, textarea:active{
+    animation-name: animacion;
+    animation-duration: 0.1s;
+    animation-direction: reverse;
 }
 
-
+#mensaje{
+    color: darkorange;
+}
 
 textarea{
-	
+	width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #8090B7;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #8090B7;
 }

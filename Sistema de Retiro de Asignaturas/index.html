@@ -9,12 +9,13 @@
 	</head>
 
 	<body>
-
-		<h1>Sistema de Retiro de Asignaturas</h1>
+        
+		<h1><img src="css/Logo1.png" class="logo1"> Sistema de Retiro de Asignaturas</h1>
 		
+        <div class="contenedor">
 		<form name="info" action="retirar.php" method="post" onsubmit="return validandoForms()">
             <div id="Informacion">
-            	<fieldset class="datosEstudiante">
+            	<fieldset class="datosEstudiante" >
                 	<legend >Información</legend>
 
                 	<label for="txtNombre">Nombre:</label>
@@ -36,7 +37,7 @@
         	
             </div>
             <div id="Asignatura">
-                <fieldset class="datosAsignatura">
+                <fieldset class="datosAsignatura" >
                     <legend >Asignatura</legend>
 
                     <label for="txtNombreA">Nombre:</label>
@@ -48,15 +49,16 @@
                     <label for="txtUnidades">Unidades de Credito:</label>
                     <input type="number" name="unidades" id="txtUnidades" value = "4">              
 
-                    <label for="txtMotivo">Motivo del retiro:</label>
-                    <textarea name="motivo" id="txtMotivo" required>Porque si</textarea>
-                    
-                    <button>Procesar Retiro</button>
+                    <label for="txtMotivo">Motivo del retiro: </label> <br>
+                    <textarea name="motivo" id="txtMotivo" >Porque si</textarea>
+                    <br>
+                    <p id="mensaje"></p>
+                    <button class="boton">Procesar Retiro</button>
 
                 </fieldset>
             </div>
         </form>
-        
+        </div>
 		<script src="js/code.js" ></script>
         <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 	</body>

@@ -1,51 +1,52 @@
 
 function validandoForms() {
+    var mens = document.getElementById("mensaje");
     var x = document.forms["info"]["nombre"].value;
-    if (x == "") {
-        alert("Debe colocar su nombre");
+    if (x === "") {
+        mens.innerHTML = "Debe colocar su nombre";
         document.getElementById("txtNombre").focus();
         return false;
     }
     x = document.forms["info"]["apellido"].value;
-    if (x == "") {
-        alert("Debe colocar su apellido");
+    if (x === "") {
+        mens.innerHTML = "Debe colocar su apellido";
         document.getElementById("txtApellido").focus();
         return false;
     }
     x = document.forms["info"]["cedula"].value;
-    if (x == "") {
-        alert("Debe colocar su cédula");
+    if (x === "") {
+        mens.innerHTML = "Debe colocar su cédula";
         document.getElementById("txtCedula").focus();
         return false;
     }
     x = document.forms["info"]["carrera"].value;
-    if (x == "") {
-        alert("Debe colocar la carrera que cursa");
+    if (x === "") {
+        mens.innerHTML = "Debe colocar su carrera";
         document.getElementById("txtCarrera").focus();
         return false;
     }
     x = document.forms["info"]["semestre"].value;
-    if (x == "") {
-        alert("Debe colocar el semestre con mas materias inscritas");
+    if (x === "") {
+        mens.innerHTML = "Indique el máximo número de unidades a cursar";
         document.getElementById("txtSemestre").focus();
         return false;
     }
 
-    x = document.forms["asig"]["nombreA"].value;
-    if (x == "") {
-        alert("Debe colocar el nombre de la asignatura a retirar");
+    x = document.getElementById("txtNombreA").value;
+    if (x === "") {
+        mens.innerHTML = "Indique el nombre de la asignatura";
         document.getElementById("txtNombreA").focus();
         return false;
     }
-    x = document.forms["asig"]["codigo"].value;
-    if (x == "") {
-        alert("Debe colocar el codigo de la asignatura a retirar");
+    x = document.getElementById("txtCodigo").value;
+    if (x === "") {
+        mens.innerHTML = "Indique el código de la asignatura";
         document.getElementById("txtCodigo").focus();
         return false;
     }
-    x = document.forms["asig"]["unidades"].value;
-    if (x == "") {
-        alert("Debe colocar el número de unidades de credito de la asignatura a retirar");
+    x = document.getElementById("txtUnidades").value;
+    if (x === "") {
+        mens.innerHTML = "Indique el número de uc de la asignatura";
         document.getElementById("txtUnidades").focus();
         return false;
     }
