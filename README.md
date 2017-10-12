@@ -1,4 +1,4 @@
-# Programación II - Parcial II, Práctica 1
+# Programación II - Parcial II, Proyecto: Registro de Eventos
 
 **Team**: 
 
