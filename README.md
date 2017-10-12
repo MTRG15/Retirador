@@ -8,9 +8,5 @@ Javier H. Bastidas Q.
 Marco T. Ramirez G.
 **C.I.**: 24148570
 
-*Ejercicio*:
-
-**1-** Sistema de Retiro de Asignaturas
-
 
 
