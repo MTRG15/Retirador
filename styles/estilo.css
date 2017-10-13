@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: darkolivegreen;
+    widows: 100%;
+}
+#registro{
+    background-color: dodgerblue;
+    width: 30%;
+    position: fixed;
+    left: 70%;
+    
+}
+
+input, table{
+    width: 100%;
+}
+
+th{
+    text-align: right;
+}
+
+h2, h1{
+
+    text-align: center;
+}
