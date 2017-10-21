@@ -16,7 +16,7 @@
 		$rows = mysqli_num_rows($result);
 		if($rows == 0){ //El usuaio no esta registrado entonces lo agrego a la tabla
 
-			//echo "Nadaaa";
+			
 			//mysqli_real_escape_string sirve para llevar al $post  una variable validad para el SQL
 			$n = mysqli_real_escape_string($link, $_POST['reg-nombre']);
 			$a = mysqli_real_escape_string($link, $_POST['reg-apellido']);
@@ -32,13 +32,15 @@
 
 			$result2 = mysqli_query($link, $query);
 			if($result2){
-				echo "Added";
+				echo "Usuario registrado con éxito." . "<br>";
+				echo "<a href='../index.html'><input type='button' value='Regresar al inicio'></input></a>";
 			}else{
-				echo "Failed";
+				echo "Fallo el registro de usuario." . "<br>";
+				echo "<a href='../index.html'><input type='button' value='Regresar al inicio'></input></a>";
 			}
 		}else{
 			echo "Usuario  - $user -  registrado <br>";
-			echo "<a href='../index.html'>Regresar al inicio</a>";
+			echo "<a href='../index.html'><input type='button' value='Regresar al inicio'></input></a>";
 		}
 	}
 	
