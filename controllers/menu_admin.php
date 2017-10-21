@@ -14,8 +14,14 @@
 		
 		while($row = mysqli_fetch_assoc($result)){ //Todas sus filas
 			echo $row["nombres"] . " " . $row["apellidos"] . " " . $row["cedula"] . " <br>";
-
 			$user = $row["usuario"];
+			$id = $row["id"]; //Mandare el id de el usuario para mostrar detalles
+
+			echo"<form method='post' action='detalles_usuario.php'><input type='submit' name='boton' value='Detalles'><input type='hidden' name='id' value='$id'></form>";
+			echo"<form method='post' action='editar_usuario.php'><input type='submit' name='boton' value='Editar'><input type='hidden' name='id' value='$id'></form>";
+			echo"<form method='post' action='eliminar_usuario.php'><input type='submit' name='boton' value='Eliminar'><input type='hidden' name='id' value='$id'></form>";
+			
+
 			$q2 = "SELECT * FROM `boletos` WHERE usuario = '$user'"; //Luego me traigo todos los eventos registrados por ese user
 
 			if($result2 = mysqli_query($link, $q2)){	
@@ -27,9 +33,16 @@
 				while($row2 = mysqli_fetch_assoc($result2)){
 					
 					echo "---" . $row2["evento"] . " - " . $row2["ubicacion"] . "   ";
-					echo "<a href='detalles.php'><input type='button' value='Detalles'></input></a>". "  ";
-					echo "<a href='editar.php'><input type='button' value='Editar'></input></a>". "  ";
-					echo "<a href='eliminar.php'><input type='button' value='Eliminar'></input></a>". " <br>";
+					$id2 = $row2["id"];
+
+					echo"<form method='post' action='detalles.php'><input type='submit' name='boton' value='Detalles'><input type='hidden' name='id' value='$id'><input type='hidden' name='id2' value='$id2'></form>";
+					echo"<form method='post' action='editar.php'><input type='submit' name='boton' value='Editar'><input type='hidden' name='id' value='$id'><input type='hidden' name='id2' value='$id2'></form>";
+					echo"<form method='post' action='eliminar.php'><input type='submit' name='boton' value='Eliminar'><input type='hidden' name='id' value='$id'><input type='hidden' name='id2' value='$id2'></form>";
+
+					//echo "<a href='detalles.php'><input type='submit' value='Detalles'></input></a>". "  ";
+					//echo "<a href='editar.php'><input type='submit' value='Editar'></input></a>". "  ";
+					//echo "<a href='eliminar.php'><input type='submit' value='Eliminar'></input></a>". " <br>";
+					//echo "</form>";
 				}	
 				echo "<br>";		
 			}	

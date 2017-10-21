@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 21-10-2017 a las 19:49:30
+-- Tiempo de generación: 21-10-2017 a las 22:56:11
 -- Versión del servidor: 5.7.19
 -- Versión de PHP: 5.6.31
 
@@ -44,10 +44,9 @@ CREATE TABLE IF NOT EXISTS `boletos` (
 --
 
 INSERT INTO `boletos` (`id`, `serial`, `evento`, `fecha`, `ubicacion`, `usuario`) VALUES
-(1, 34235, 'Heaven And Hell Fest', '24/05/2018', 'USA', 'jose'),
+(1, 32352, 'Heaven And Hell ', '12/12/2012', 'Altos', 'jose'),
 (6, 2572382, 'Wacken Open Air', '24/07/1996', 'VIP', 'Javier7B'),
-(5, 67483, 'Estadio', '12/12/2012', 'Altos', 'jose'),
-(7, 3245, 'Otro mas', '17/03/1990', 'Altos', 'Javier7B');
+(7, 3245, 'Eventazo', '17/03/1990', 'Medios', 'Javier7B');
 
 -- --------------------------------------------------------
 
@@ -69,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `password` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `admin` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
@@ -77,9 +76,9 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `nombres`, `apellidos`, `cedula`, `direccion`, `sexo`, `telefono`, `email`, `usuario`, `password`, `admin`) VALUES
 (1, 'Gerifruncio Maizeno', 'De La Consolacion', 123456, 'Junto a Merceria Paquita', 'none', '08001235555', 'malindranio@gmail.com', 'p3tr0m1n0', 'chanchan', 0),
-(2, 'Jose', 'Perez', 2567382, 'Hell', 'otro', '041666666', 'elcorreo@hotmail.com', 'jose', 'epa', 0),
+(2, 'Jose', 'Perez', 25638324, 'Heaven', 'masculino', '04127777', 'elsegundo@hotmail.com', 'jose', 'epa', 0),
 (3, 'Javier Humberto', 'Bastidas Quintero', 25632200, 'Santa Ana', 'masculino', '04149796050', 'javier7bastidas@gmail.com', 'javier7b', 'JavierHBQ7', 1),
-(4, 'maria', 'gonzalez', 423523, 'Arriba de abajo', 'femenino', '14235252', 'lalola@hotmail.com', 'mg', 'soyla', 0);
+(5, 'Marco Tulio', 'Ramirez', 24322309, 'Las Vegas', 'masculino', '041723742', 'marcot.ramirez@unet.edu.ve', 'marco', 'mako', 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
