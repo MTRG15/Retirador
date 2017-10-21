@@ -27,7 +27,8 @@
 			$e = mysqli_real_escape_string($link, $_POST['reg-correo']);
 			$u = mysqli_real_escape_string($link, $_POST['reg-user']);
 			$p = mysqli_real_escape_string($link, $_POST['reg-password']);
-			$query = "INSERT INTO `usuarios` (`nombres`, `apellidos`, `cedula`, `direccion`, `sexo`, `telefono`, `email`, `usuario`, `password`)VALUES('$n','$a', '$c', '$d', '$s', '$t', '$e', '$u', '$p');";
+			$ad = 0;
+			$query = "INSERT INTO `usuarios` (`nombres`, `apellidos`, `cedula`, `direccion`, `sexo`, `telefono`, `email`, `usuario`, `password`,  `admin`)VALUES('$n','$a', '$c', '$d', '$s', '$t', '$e', '$u', '$p', '$ad');";
 
 			$result2 = mysqli_query($link, $query);
 			if($result2){
