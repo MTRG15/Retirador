@@ -37,7 +37,7 @@
 			}
 		}else{
 			echo "Usuario  - $user -  registrado <br>";
-			echo "<a href='../index.html'>Regresar al formulario</a>";
+			echo "<a href='../index.html'>Regresar al inicio</a>";
 		}
 	}
 	

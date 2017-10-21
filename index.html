@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="styles/estilo.css">
+        <meta charset="utf-8"/>
         <title>Registro de Eventos Unet</title>
+        <link rel="stylesheet" type="text/css" href="styles/estilo.css">
 </head>
 <body>
+
     <h1>Eventos UNET</h1>
+    <div id="iniciar">
+        <form name="ini" method="post" action="controllers/iniciar.php">
+            <input type="text" name="ini-user" placeholder="Nombre de Usuario">
+            <input type="text" name="ini-password" placeholder="Contraseña">
+            <input type="submit" name="ini-boton" value="Iniciar Sesion">
+        </form>
+    </div>
+    <br>
     <div id="registro">
     <h2>Registro</h2>
     <form name="reg" method="post" action="controllers/registro.php">
@@ -28,6 +37,7 @@
     <input name="reg-boton" type="submit" value="Registrarse">
     </form>
     </div>
+
  
     
 </body>
