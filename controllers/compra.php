@@ -25,7 +25,13 @@
     <input name="boton-boleto" type="submit" value="Registrar Boleto">
     </form>
     </div>
-
+    <?php
+    	if(isset($_SESSION['admin'])){ //Si es un admin puede regresar a su menu
+    		if($_SESSION['admin']==1){
+    			echo "<a href='menu_admin.php'><input type='button' value='Regresar al Menu'></input></a>";
+    		}
+    	}
+    ?>
 	<a href="cerrar.php"><input type="button" value="Cerrar Sesion"></input></a>
  </body>
  </html>

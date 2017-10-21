@@ -31,11 +31,14 @@
 			$rows = mysqli_num_rows($result);
 			if($rows == 0){ //El usuaio no es administrador
 				//echo "NO";
+				$_SESSION['admin']==0;
 				header("Location: compra.php");
 				//echo "<a href='../index.html'>Regresar al formulario</a>";
 			}else{ //El usuario es adminitrador
 				//echo "SI";
-				echo "<a href='../index.html'>Regresar al formulario</a>";
+				$_SESSION['admin']=1;
+				header("Location: menu_admin.php");
+				//echo "<a href='../index.html'>Regresar al formulario</a>";
 			}
 		}
 	}
