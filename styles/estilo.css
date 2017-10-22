@@ -1,18 +1,45 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: darkolivegreen;
-    widows: 100%;
+    background: url("imagenes/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: sans-serif, fantasy;
 }
 
-#registro{
-    background-color: dodgerblue;
+.form-content{
+    background-color: #DEDACC;
+    border: 3px solid #756B54;
+    border-radius: 5%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+.registro{ top: 250px; }
+.login, .registro{
     width: 30%;
     position: fixed;
-    left: 35%;
+    left: 65%;
+}
+.mensaje{
+    width: 60%;
+    margin: auto;
+    border-radius: 0% !important;
+}
+
+#sex-select{
+    margin-left: 10px;
 }
 
 input, table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 90%;
+}
+
+tbody, td{
     width: 100%;
 }
 

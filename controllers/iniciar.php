@@ -7,6 +7,7 @@
 
 	$user = $_POST["ini-user"];
 	$pass = $_POST["ini-password"];
+    
 
 	$es = 0;
 
@@ -14,12 +15,12 @@
 	if($result = mysqli_query($link, $q)){		
 		$rows = mysqli_num_rows($result);
 		if($rows == 0){ //El usuaio no esta registrado entonces lo agrego a la tabla
-			echo "Combinacion de usuario y contraseña invalida <br>";
-			echo "<a href='../index.html'>Regresar al formulario</a>";
+			$mensaje = "Combinacion de usuario y contraseña inválida <br>";
+			
 		}else{ //Si puede iniciar sesion
 			session_start();
 			$_SESSION["user"] = $user;
-			echo "Iniciando sesion";
+			$mensaje = "Iniciando sesion";
 			$es = 1;
 		}
 	}
@@ -48,3 +49,19 @@
 
 	mysqli_close($link);
  ?>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../styles/estilo.css">
+        <title>Iniciar Sesión</title>
+    </head>
+    <body>
+        <h1>Inicio de Sesión</h1>
+        <div class="form-content mensaje">
+            <p> <?php echo $mensaje ?> </p>
+            <a href='../index.html'>Regresar al formulario</a>
+        </div>
+    </body>
+    
+</html>

@@ -3,7 +3,7 @@
 	defined('DB_HOST') or define ('DB_HOST', 'localhost');
 	defined('DB_USER') or define ('DB_USER', 'root');
 	defined('DB_PASS') or define ('DB_PASS', '');
-	defined('DB_NAME') or define ('DB_NAME', 'sistemadeboletos'); //Nombre en minuscula
+	defined('DB_NAME') or define ('DB_NAME', 'id3226985_sistemadeboletos'); //Nombre en minuscula
 
 	//Si voy a crear la base de datos desde aqui no le coloco nombre porque aun no existe, luego si el DB_NAME
 	$link = mysqli_connect(DB_HOST,DB_USER,DB_PASS, DB_NAME);

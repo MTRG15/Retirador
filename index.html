@@ -8,15 +8,16 @@
 <body>
 
     <h1>Eventos UNET</h1>
-    <div id="iniciar">
+    <div class="form-content login">
+        <h2>Ingreso</h2>
         <form name="ini" method="post" action="controllers/iniciar.php">
-            <input type="text" name="ini-user" placeholder="Nombre de Usuario">
-            <input type="text" name="ini-password" placeholder="Contraseña">
-            <input type="submit" name="ini-boton" value="Iniciar Sesion">
+            <input type="text" name="ini-user" class="campo" placeholder="Nombre de Usuario">
+            <input type="text" name="ini-password" class="campo" placeholder="Contraseña">
+            <input type="submit" name="ini-boton" class="campo" value="Iniciar Sesion">
         </form>
     </div>
     <br>
-    <div id="registro">
+    <div class="form-content registro">
     <h2>Registro</h2>
     <form name="reg" method="post" action="controllers/registro.php">
     <table>
@@ -24,7 +25,7 @@
         <tr><th>Apellidos:</th>     <td><input  name="reg-apellido"  type="text"     placeholder="De La Consolacion"></td></tr>
         <tr><th>Cedula:</th>        <td><input  name="reg-cedula"    type="number"   placeholder="123456"></td></tr>
         <tr><th>Direccion:</th>     <td><input  name="reg-direccion" type="text"     placeholder="Junto a Merceria Paquita"></td></tr>
-        <tr><th>Sexo:</th>          <td><select name="reg-sexo"> 
+        <tr><th>Sexo:</th>          <td><select name="reg-sexo" id="sex-select"> 
                                     <option value="none">-Seleccione-</option> 
                                     <option value="masculino">Masculino</option> 
                                     <option value="femenino">Femenino</option> 
@@ -34,7 +35,7 @@
         <tr><th>Usuario:</th>       <td><input  name="reg-user"      type="text"     placeholder="p3tr0m1n0"></td></tr>
         <tr><th>Contraseña:</th>    <td><input  name="reg-password"  type="password" placeholder="chanchan"></td></tr>
     </table>
-    <input name="reg-boton" type="submit" value="Registrarse">
+    <input name="reg-boton" type="submit" class="campo" value="Registrarse">
     </form>
     </div>
 
