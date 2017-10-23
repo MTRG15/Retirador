@@ -2,19 +2,21 @@
 
 	session_start(); //Reanudando session	
 	if(!isset($_SESSION['user'])){
-		header("Location: ../index.html");
+		header("Location: ../index.php");
 	}
 	//echo "comprando";
  ?>
+
  <!DOCTYPE html>
  <html>
  <head>
- 	<meta charset="utf-8"/>
- 	<title>Compra de Boletos</title>
+ 	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../styles/estilo.css">
+    <title>Compra de Boletos</title>
  </head>
  <body>
  	<h1>Registrar Boleto</h1>
-    <div id="reg-boleto">
+    <div id="reg-boleto" class="form-content mensaje">
     <form name="regB" method="post" action="compra_exitosa.php">
     <table>
         <tr><th>Serial:</th>       <td><input  name="reg-serial"    type="number"     placeholder="2678432"></td></tr>

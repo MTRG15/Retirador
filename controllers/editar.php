@@ -3,7 +3,7 @@
 	require_once("../db/connect.php");
 	session_start(); //Reanudando session	
 	if(!isset($_SESSION['user']) || $_SESSION['admin']==0){ //Si no hay sesion o el usuario no es admin 
-		header("Location: ../index.html");
+		header("Location: ../index.php");
 	}
 	if(isset($_POST['botone'])){
 		//echo "eshooo";
@@ -49,11 +49,12 @@
  <html>
  <head>
  	<meta charset="utf-8"/>
+      <link rel="stylesheet" type="text/css" href="/styles/estilo.css">
  	<title>Edicion</title>
  </head>
  <body>
  	<h1>Editando evento</h1>
-    <div id="edit">
+    <div id="edit" class="form-container">
 	    <form name="regB" method="post" action="">
 	    <table>
 	        <tr><th>Serial:</th>       <td><input  name="reg-serial"    type="number"     placeholder="<?= $s ?>"></td></tr>

@@ -3,20 +3,33 @@
 
 	session_start(); //Reanudando session	
 	if(!isset($_SESSION['user']) || $_SESSION['admin']==0){ //Si no hay sesion o el usuario no es admin 
-		header("Location: ../index.html");
+		header("Location: ../index.php");
 	}
 
 	
 	echo "<h1>Listado de eventos</h1>";
 
 	$q = "SELECT * FROM `usuarios`"; //Me traigo toda la tabla de usuarios
-	if($result = mysqli_query($link, $q)){		
-		
+	if($result = mysqli_query($link, $q)){		?>
+
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="utf-8">
+                <link rel="stylesheet" type="text/css" href="../styles/estilo.css">
+                <title>Menu - Administrador</title>
+            
+            </head>
+        <body>
+		<?php
 		while($row = mysqli_fetch_assoc($result)){ //Todas sus filas
-			echo $row["nombres"] . " " . $row["apellidos"] . " " . $row["cedula"] . " <br>";
+            
+			echo '<div class="form-content mensaje">';
+            
+            echo "<b>" . $row["nombres"] . " " . $row["apellidos"] . " " . $row["cedula"] . "</b><br>";
 			$user = $row["usuario"];
 			$id = $row["id"]; //Mandare el id de el usuario para mostrar detalles
-
+            
 			echo"<form method='post' action='detalles_usuario.php'><input type='submit' name='boton' value='Detalles'><input type='hidden' name='id' value='$id'></form>";
 			echo"<form method='post' action='editar_usuario.php'><input type='submit' name='boton' value='Editar'><input type='hidden' name='id' value='$id'></form>";
 			echo"<form method='post' action='eliminar_usuario.php'><input type='submit' name='boton' value='Eliminar'><input type='hidden' name='id' value='$id'></form>";
@@ -27,11 +40,13 @@
 			if($result2 = mysqli_query($link, $q2)){	
 				$regs = mysqli_num_rows($result2); //Numero de filas 
 				if($regs == 0){
-						echo "---" . "No posee eventos registrados" . " <br>" . "<br>";
+				    echo "---" . "No posee eventos registrados" . " <br>" . "<br>";
 						
-				} 
+				} else{
+                    echo "<b>Eventos Registrados</b>" . "<br>" . "<br>";
+                }
 				while($row2 = mysqli_fetch_assoc($result2)){
-					
+                    
 					echo "---" . $row2["evento"] . " - " . $row2["ubicacion"] . "   ";
 					$id2 = $row2["id"];
 
@@ -43,9 +58,12 @@
 					//echo "<a href='editar.php'><input type='submit' value='Editar'></input></a>". "  ";
 					//echo "<a href='eliminar.php'><input type='submit' value='Eliminar'></input></a>". " <br>";
 					//echo "</form>";
+                    
+                    
 				}	
 				echo "<br>";		
 			}	
+            echo '</div>';
 		}
 	}
 	
@@ -53,12 +71,7 @@
 
 
  ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+
 
     
 	<br>

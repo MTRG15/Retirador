@@ -3,7 +3,7 @@
 	require_once("../db/connect.php");
 	session_start(); //Reanudando session	
 	if(!isset($_SESSION['user']) || $_SESSION['admin']==0){ //Si no hay sesion o el usuario no es admin 
-		header("Location: ../index.html");
+		header("Location: ../index.php");
 	}
 
 	//print_r($_POST);
@@ -46,3 +46,9 @@
 
 	mysqli_close($link);
  ?>
+<html>
+    <head>
+         <link rel="stylesheet" type="text/css" href="/styles/estilo.css">
+    </head>
+    <body></body>
+</html>

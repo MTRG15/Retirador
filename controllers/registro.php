@@ -1,8 +1,15 @@
+<html>
+    <head>
+        <title>Registro de Usuario</title>
+         <link rel="stylesheet" type="text/css" href="../styles/estilo.css">
+    </head>
+    <body>
+
 <?php
 
 	//print_r($_POST);
 	if(!isset($_POST["reg-boton"])){
-		header("Location: ../index.html");
+		header("Location: ../index.php");
 	}
 
 	require_once("../db/connect.php");
@@ -33,14 +40,15 @@
 			$result2 = mysqli_query($link, $query);
 			if($result2){
 				echo "Usuario registrado con éxito." . "<br>";
-				echo "<a href='../index.html'><input type='button' value='Regresar al inicio'></input></a>";
+				echo "<a href='../index.php'><input type='button' value='Regresar al inicio'></input></a>";
 			}else{
 				echo "Fallo el registro de usuario." . "<br>";
-				echo "<a href='../index.html'><input type='button' value='Regresar al inicio'></input></a>";
+				echo "<a href='../index.php'><input type='button' value='Regresar al inicio'></input></a>";
 			}
 		}else{
+            echo '<div class="form-content mensaje"><h2>Registro de Usuario</h2>';
 			echo "Usuario  - $user -  registrado <br>";
-			echo "<a href='../index.html'><input type='button' value='Regresar al inicio'></input></a>";
+			echo "<a href='../index.php'><input type='button' value='Regresar al inicio'></input></a> </div>";
 		}
 	}
 	
@@ -50,3 +58,8 @@
 	mysqli_close($link);
 	
 ?>
+
+
+    
+    </body>
+</html>

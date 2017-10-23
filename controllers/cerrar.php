@@ -2,7 +2,7 @@
 	session_start();
 	if(!isset($_SESSION['user'])){ //Si la session no existe nos vamos al inicio
 
-		header("Location: ../index.html");
+		header("Location: ../index.php");
 
 	}else{
 		// Inicializar la sesión.
@@ -23,7 +23,7 @@
 
 		// Finalmente, destruir la sesión.
 		session_destroy();
-		header("Location: ../index.html");
+		header("Location: ../index.php");
 	}
 
  ?>

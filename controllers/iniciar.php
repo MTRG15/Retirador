@@ -60,7 +60,7 @@
         <h1>Inicio de Sesión</h1>
         <div class="form-content mensaje">
             <p> <?php echo $mensaje ?> </p>
-            <a href='../index.html'>Regresar al formulario</a>
+            <a href='../index.php'>Regresar al formulario</a>
         </div>
     </body>
     

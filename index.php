@@ -1,3 +1,12 @@
+<?php
+    $post[0] = [ "0", "<b>Don't Starve</b><br>El científico llevado al extremo en un ambiente hostil<br>2X/1X/201X" ];
+    $post[1] = [ "1", "<b>Bioshock Infinite Comic</b><br>El último avance en la popular historia<br>2X/1X/201X" ];
+    $post[2] = [ "2", "<b>Transistor</b><br>La historia de un paraíso distópico en un mundo tecnológico<br> 2X/1X/201X" ];
+    $post[3] = [ "3", "<b>Mr. Robot</b><br>El mayor nergasmo del momento<br> 2X/1X/201X" ];
+    
+ shuffle($post);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,8 +47,23 @@
     <input name="reg-boton" type="submit" class="campo" value="Registrarse">
     </form>
     </div>
-
- 
+    
+    <?php 
+        for($i = 0; $i<4 ; $i++){ ?>
+    <div class="form-content post">
+        <h3>Tendencias</h3>
+        <table>
+            <tr> 
+            <td class="poster-container"> <img class="poster" src="styles/imagenes/poster<?php echo $post[$i][0] ?>.png"> </td>
+            <td>
+                <p><?php echo $post[$i][1] ?></p> 
+            </td>
+            </tr>
+        </table>
+        
+    </div>
+    <?php } ?>
+     
     
 </body>
 

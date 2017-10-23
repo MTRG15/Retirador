@@ -1,9 +1,19 @@
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Confimarción de Compra de Boleto</title>
+        <link rel="stylesheet" type="text/css" href="../styles/estilo.css">
+    </head>
+
+    <body class="compra_e">
+        <h2>Registro de Boleto</h2>
 <?php 
 	require_once("../db/connect.php");
 	session_start();
 	
 	if(!isset($_SESSION['user'])){
-		header("Location: ../index.html");
+		header("Location: ../index.php");
 	}
 
 	$usuario = $_SESSION['user'];
@@ -31,14 +41,15 @@
 
 			$result2 = mysqli_query($link, $query);
 			if($result2){
-				echo "Added";
+				//echo "Added";
 				$reg = 1;
 			}else{
-				echo "Failed";
+				//echo "Failed";
 				$reg = 0;
 			}
-		}else{
-			echo "El boleto  - $serial -  ya se encuentra registrado <br>";
+		}else{ ?>
+			<div class="form-content mensaje"><p>El boleto  - <?php echo $serial ?> -  ya se encuentra registrado<p/></div>
+        <?php
 			$reg = 0;
 			//echo "<a href='compra.php'>Regresar al registro</a>";
 		}
@@ -49,17 +60,9 @@
 
  ?>
 
- <!DOCTYPE html>
- <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Confimarción de Compra de Boleto</title>
-        
-    </head>
 
-    <body class="compra_e">
     <?php if($reg==1){ ?>	
-	    <fieldset class="recibido">
+	    <div class="recibido form-content mensaje" >
 	    	
 	        <p>Los datos de su boleta: <?= $serial ?> han sido agregados. </p>
 	        <table>
@@ -69,7 +72,7 @@
 	            <tr> <th>Ubicacion:</th> <td><?= $ubicacion ?></td>   
 	        </table>
 	        
-	    </fieldset>
+	    </div>
 	<?php } ?>
     <?php
     	if(isset($_SESSION['admin'])){ //Si es un admin puede regresar a su menu

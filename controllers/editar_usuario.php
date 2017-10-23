@@ -3,7 +3,7 @@
 	require_once("../db/connect.php");
 	session_start(); //Reanudando session	
 	if(!isset($_SESSION['user']) || $_SESSION['admin']==0){ //Si no hay sesion o el usuario no es admin 
-		header("Location: ../index.html");
+		header("Location: ../index.php");
 	}
 	if(isset($_POST['botone'])){
 		//echo "eshooo";
@@ -59,10 +59,11 @@
  <head>
  	<meta charset="utf-8"/>
  	<title>Edicion</title>
+      <link rel="stylesheet" type="text/css" href="../styles/estilo.css">
  </head>
  <body>
  	<h1>Editando Usuario</h1>
-    <div id="edit">
+    <div id="edit" class="form-content mensaje">
 	    <form name="regB" method="post" action="">
 	    <table>
 	        <tr><th>Nombres:</th>       <td><input  name="reg-nombre"    type="text"     placeholder="<?= $n ?>"></td></tr>
@@ -82,7 +83,7 @@
 	    <input name="id" type="hidden" value="<?= isset($_POST['botone'])? '' : $id ?>">
 	    <input name="botone" type="submit" value="Editar Usuario">
 	    </form>
-    </div>
+    
     <?php
     	if(isset($_SESSION['admin'])){ //Si es un admin puede regresar a su menu
     		if($_SESSION['admin']==1){
@@ -91,5 +92,6 @@
     	}
     ?>
 	<a href="cerrar.php"><input type="button" value="Cerrar Sesion"></input></a>
+     </div>
  </body>
  </html>
